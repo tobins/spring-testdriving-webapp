@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- cucumber.xml is loaded by the  -->
+	<context:component-scan base-package="cucumber.runtime.java.spring"/>
+    <context:annotation-config/>
+
+	<!-- wire beans required for testing -->    
+    <import resource="classpath*:/context.xml"/>
+</beans>
